@@ -1,0 +1,42 @@
+body {
+   background-color:palegreen;
+}
+
+h1 {
+   font-family:Arial;
+   font-size:28pt;
+   text-aling:center;
+   background-color:lightskyblue;
+   color:rebeccapurple;
+}
+
+ul{
+  list-style:none;
+}
+
+ul li {
+    float: left;
+    padding:10px;
+    font-family:Arial;
+    font-size:18pt
+    color:blue
+    
+}
+
+.estilo-img {
+    width:190px;
+    height:190px;
+    border-radius:101px;
+    transition:300ms;
+}
+
+.estilo-img:hover {
+    box-shadow:5px 5px 2px gray;
+    transform:scale(1.2);
+}
+/*estilo de tabla*/
+table, td {
+    border:solid 1px black;
+    width:50% 
+    background-color:white;
+}
