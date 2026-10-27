@@ -1,0 +1,30 @@
+﻿@using Catalogolista.Models
+@model List<Articulo>
+@{
+           ViewData ["Title"] = "Articulo";
+}
+<h1>Lista de Articulos</h1>
+
+<table class="table table-striped">
+       <thead>
+               <tr>
+                     <th>Codigo</th>
+                     <th>Producto</th>
+                     <th>Categoria</th>
+                     <th>Precio</th>
+                     <th>Stock</th>
+               </tr>
+       </thead>
+       <tbody>
+               @foreach (Articulo p in Model)
+                {
+                       <tr>
+                             <td>@p.Codigo</td>
+                             <td>@p.Nombre</td>
+                             <td>@p.Categoria</td>
+                             <td>@p.PrecioVenta.ToString("NO") Gs</td>
+                             <td>@p.Stock</td>
+                       </tr>
+                }
+         </tbody>
+</table>
