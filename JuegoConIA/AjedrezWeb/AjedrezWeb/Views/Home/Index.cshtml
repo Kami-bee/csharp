@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "Ajedrez";
+}
+
+<div class="chess-container">
+    <header class="chess-header">
+        <div>
+            <span class="chess-subtitle">DOS JUGADORES · UNA PARTIDA</span>
+            <h1>♟ Ajedrez</h1>
+            <p>Demuestra tu estrategia y conquista el tablero.</p>
+        </div>
+    </header>
+
+    <section class="players-panel">
+        <div class="player-card white-player">
+            <label for="whiteName">♔ Jugador de blancas</label>
+            <input id="whiteName" class="form-control"
+                   maxlength="25" value="Jugador 1">
+            <div class="player-points">
+                <span>Puntuación</span>
+                <strong id="whitePoints">0</strong>
+            </div>
+            <small id="whiteStats">0 victorias</small>
+        </div>
+
+        <div class="player-card black-player">
+            <label for="blackName">♚ Jugador de negras</label>
+            <input id="blackName" class="form-control"
+                   maxlength="25" value="Jugador 2">
+            <div class="player-points">
+                <span>Puntuación</span>
+                <strong id="blackPoints">0</strong>
+            </div>
+            <small id="blackStats">0 victorias</small>
+        </div>
+    </section>
+
+    <main class="game-layout">
+        <section class="board-section">
+            <div class="game-status" id="gameStatus">
+                Blancas comienzan la partida.
+            </div>
+
+            <div class="board-wrapper">
+                <div id="chessBoard" class="chess-board"></div>
+            </div>
+
+            <div class="game-controls">
+                <button id="undoButton" class="btn btn-outline-secondary">
+                    ↶ Deshacer
+                </button>
+                <button id="restartButton" class="btn btn-primary">
+                    ↻ Reiniciar
+                </button>
+                <button id="newGameButton" class="btn btn-success">
+                    Nueva partida
+                </button>
+            </div>
+
+            <p class="board-help">
+                Selecciona una pieza y después una casilla resaltada
+                para realizar tu movimiento.
+            </p>
+        </section>
+
+        <aside class="game-sidebar">
+            <div class="sidebar-card">
+                <h3>♟ Historial</h3>
+                <div id="moveHistory" class="move-history">
+                    Todavía no hay movimientos.
+                </div>
+            </div>
+
+            <div class="sidebar-card">
+                <h3>🏆 Estadísticas</h3>
+                <div class="stat-row">
+                    <span>Victorias blancas</span>
+                    <strong id="whiteWins">0</strong>
+                </div>
+                <div class="stat-row">
+                    <span>Victorias negras</span>
+                    <strong id="blackWins">0</strong>
+                </div>
+                <div class="stat-row">
+                    <span>Empates</span>
+                    <strong id="draws">0</strong>
+                </div>
+                <div class="stat-row">
+                    <span>Partidas terminadas</span>
+                    <strong id="totalGames">0</strong>
+                </div>
+                <button id="resetScores" class="btn btn-outline-danger w-100 mt-3">
+                    Borrar estadísticas
+                </button>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="chess-footer">
+        AjedrezWeb · Desarrollado con ASP.NET Core MVC y JavaScript
+    </footer>
+</div>
+
+<script type="module" src="~/js/site.js" asp-append-version="true"></script>
